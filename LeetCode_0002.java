@@ -1,5 +1,3 @@
-package com.qhee.ztt.entity;
-
 /**
  * @author LiJieYao
  * @description LeetCode Problem  2
