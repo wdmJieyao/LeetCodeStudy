@@ -1,5 +1,3 @@
-package com.qhee.ztt.entity;
-
 import java.util.Arrays;
 import java.util.HashMap;
 
