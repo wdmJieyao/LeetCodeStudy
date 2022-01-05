@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 力扣第15题
  */
-public class LeetCode15 {
+public class LeetCode_0015 {
 
     public static void main(String[] args) {
 //        ListNode a5 = new ListNode(5);
@@ -83,5 +83,24 @@ public class LeetCode15 {
             this.val = val;
             this.next = next;
         }
+    }
+
+    /**
+     * 大佬优化方案
+     */
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        int traverse = traverse(head, n);
+        if (traverse == n)
+            return head.next;
+        return head;
+    }
+
+    private int traverse(ListNode node, int n) {
+        if (node == null)
+            return 0;
+        int num = traverse(node.next, n);
+        if (num == n)
+            node.next = node.next.next;
+        return num + 1;
     }
 }
